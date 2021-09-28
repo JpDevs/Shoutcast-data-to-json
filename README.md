@@ -26,7 +26,7 @@ Para configurar a aplicação, siga os passos abaixo
 <br>
 <img src="https://image.prntscr.com/image/fBhGaMwoRg-Y3WGIUEit2Q.png"></img>
 <br>
-2º - Altere os valores das váriaveis ip e porta para os respectivios dados da sua stream.
+2º - Altere os valores das váriaveis ip e porta para os respectivos dados da sua stream.
 ```php
 $ip = "SEU IP"; //ip da sua stream shoutcast (OBS: sem http://)
 $porta = "PORTA "; // porta da sua stream.
