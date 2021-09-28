@@ -26,7 +26,7 @@ Para configurar a aplicação, siga os passos abaixo
 <br>
 <img src="https://image.prntscr.com/image/fBhGaMwoRg-Y3WGIUEit2Q.png"></img>
 <br>
-2º - Altere os valores das váriaveis ip e porta para os respectivios dados da sua stream.
+2º - Altere os valores das váriaveis ip e porta para os respectivos dados da sua stream.
 ```php
 $ip = "SEU IP"; //ip da sua stream shoutcast (OBS: sem http://)
 $porta = "PORTA "; // porta da sua stream.
@@ -44,13 +44,14 @@ Mostrarei abaixo uma demonstração de como implementar essa api com o PHP.
 
 ```PHP
 <?php
+//Método cURL, caso a api esteja hospedada. Faz a requisição para o URL desejado. (Usar apenas URL)
 $ch = curl_init("Link da API");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_URL, $url);
 $json = curl_exec ($ch);
 curl_close($ch);
 
-$api = json_decode($json, true);
+$api = json_decode($json, true); //decodifica o json e o transforma em associativo.
 
 echo "<b>Ouvintes Atuais: </b>" . $api['CURRENTLISTENERS'] . "<br>";
 echo "<b>Tocando Agora: </b>" . $api['SONGTITLE'];
@@ -59,8 +60,9 @@ echo "<b>Tocando Agora: </b>" . $api['SONGTITLE'];
 ```
 Caso não queira usar o cURL, você pode usar o file_get_contents
 ```PHP
-$json = file_get_contents("Link ou caminho da API");
-$api = json_decode($json,true);
+$json = file_get_contents("Link ou caminho da API"); //Metodo File_get, funciona tanto em URL quanto em caminho de arquivo
+
+$api = json_decode($json,true); //decodifica o json e o transforma em associativo.
 
 echo "<b>Ouvintes Atuais: </b>" . $api['CURRENTLISTENERS'] . "<br>";
 echo "<b>Tocando Agora: </b>" . $api['SONGTITLE'];
@@ -72,3 +74,4 @@ echo "<b>Tocando Agora: </b>" . $api['SONGTITLE'];
 Esse projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## JpDevs
+<a href="https://jpdevs.com.br">https://jpdevs.com.br</a>
