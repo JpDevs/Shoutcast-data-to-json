@@ -1,6 +1,6 @@
 <?php
-$ip = "streaming.star105fm.com.br"; //ip da sua stream shoutcast (OBS: sem http://)
-$porta = "8000"; // porta da sua stream.
+$ip = "SEU IP"; //ip da sua stream shoutcast (OBS: sem http://)
+$porta = "SUA PORTA"; // porta da sua stream.
 $ssl = 0; //0 para desativar, 1 para ativar.
 //-------------------------//
 #                          #
