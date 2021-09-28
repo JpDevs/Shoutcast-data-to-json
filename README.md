@@ -74,3 +74,4 @@ echo "<b>Tocando Agora: </b>" . $api['SONGTITLE'];
 Esse projeto está sob licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## JpDevs
+<a href="https://jpdevs.com.br">https://jpdevs.com.br</a>
